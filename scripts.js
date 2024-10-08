@@ -1,10 +1,10 @@
 // Add your API endpoint here
-var API_ENDPOINT = "API_ENDPOIND_PASTE_HERE";
+var API_ENDPOINT = "https://9tigiej6r6.execute-api.us-east-1.amazonaws.com/prod";
 
 // AJAX POST request to save student data
 document.getElementById("savestudent").onclick = function(){
     var inputData = {
-        "studentid": $('#studentid').val(),
+        "studentId": $('#studentId').val(),
         "name": $('#name').val(),
         "class": $('#class').val(),
         "age": $('#age').val()
@@ -33,7 +33,7 @@ document.getElementById("getstudents").onclick = function(){
             $('#studentTable tr').slice(1).remove();
             jQuery.each(response, function(i, data) {          
                 $("#studentTable").append("<tr> \
-                    <td>" + data['studentid'] + "</td> \
+                    <td>" + data['studentId'] + "</td> \
                     <td>" + data['name'] + "</td> \
                     <td>" + data['class'] + "</td> \
                     <td>" + data['age'] + "</td> \
